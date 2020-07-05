@@ -1,0 +1,49 @@
+.contentns {
+    display: inline-flex;
+    overflow: hidden;
+    width: 768px;
+    height: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
+                0 10px 10px rgba(0, 0, 0, .2);
+    margin: 200px 150px 250px 500px;
+    font-size: 150%;
+}
+html, body {
+    background-color: linear-gradient(to bottom, #efefef, #ccc);
+}
+.left{
+    width: 50%;
+    align-self: left;
+}
+.right {
+    width: 50%;
+    align-self: right;
+    background: linear-gradient(to bottom right, #8f25d6, #620c94);
+}
+
+/* CHILDRENS*/
+
+.content {
+    display: inline-grid;
+    height: 50%;
+    width: 100%;
+    margin: 70px 8px 30px 60px;
+    border-radius: 5px;
+}
+#title {
+    font-weight: bold;
+}
+input {
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 50%;
+    width: 50%;
+}
+button {
+    border-radius: 5px;
+    height: 50%;
+    width: 50%;
+    margin: 10px 50px 40px 10px;
+}
