@@ -1,8 +1,8 @@
 <div class="contentns">
     <div class="left">
-        <signin id="sing"></signin>
+        <signin id="sing" [loginWithFocus]="loginWithFocus"  (changeValue)="receiveMessage($event)"></signin>
     </div>
     <div class="right">
-        <register id="regs"></register>
+        <register id="regs" [loginWithFocus]="loginWithFocus"  (changeValue)="receiveMessage($event)"></register>
     </div>
 </div>

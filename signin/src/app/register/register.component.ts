@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+;
 
 
 @Component({
@@ -8,18 +9,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  @Output()
-  eventEmiter: EventEmitter<string> = new EventEmitter<string>();
+  @Input()
+  loginWithFocus:boolean;
+
+  @Output() 
+  changeValue = new EventEmitter<string>();
 
   activated(): void {
     console.log('Desativado');
-    this.eventEmiter.emit('false');
+    this.changeValue.emit('false');
   }
   constructor() { }
 
   ngOnInit(): void {
-  }
-  getFocus(): boolean{
-    return true;
+
   }
 }

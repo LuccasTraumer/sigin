@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'signin',
@@ -7,12 +8,16 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  @Output()
-  eventEmiter: EventEmitter<string> = new EventEmitter<string>();
+  @Input()
+  loginWithFocus:boolean;
+
+  @Output() 
+  changeValue = new EventEmitter<string>();
 
   activate():void {
     console.log('Ativado');
-    this.eventEmiter.emit('true');
+    console.log(this.loginWithFocus);
+    this.changeValue.emit('true');
   }
 
   constructor() { }
@@ -20,8 +25,4 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getFocus(): boolean {
-    console.log('Ativado');
-    return true;
-  }
 }

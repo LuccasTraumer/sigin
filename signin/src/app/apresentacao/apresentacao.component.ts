@@ -7,9 +7,21 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
 })
 export class ApresentacaoComponent implements OnInit {
 
+
+  loginWithFocus: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  receiveMessage($event) {
+    if($event === 'true'){
+      this.loginWithFocus = true;
+    }
+    if ($event === 'false'){
+      this.loginWithFocus = false;
+    }
   }
 
 }
