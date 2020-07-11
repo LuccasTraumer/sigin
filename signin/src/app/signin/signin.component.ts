@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
-import { ApresentacaoComponent } from '../apresentacao/apresentacao.component';
+import { Component, OnInit, Input, Output, Inject } from '@angular/core';
+import { EventEmitter, $ } from 'protractor';
 
 @Component({
   selector: 'signin',
@@ -8,11 +7,12 @@ import { ApresentacaoComponent } from '../apresentacao/apresentacao.component';
   styleUrls: ['../apresentacao/apresentacao.component.css','./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-  activated: boolean;
+
+  @Output()
+  private loginActivated: EventEmitter = new EventEmitter();
 
   activate():void {
-    this.activated = true;
-    console.log(this.activated);
+    console.log('Ativado');
   }
 
   constructor() { }
@@ -20,4 +20,8 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getFocus(): boolean {
+    console.log('Ativado');
+    return true;
+  }
 }

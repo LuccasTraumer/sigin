@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'apresentacao',
@@ -7,13 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ApresentacaoComponent implements OnInit {
 
-  loginActivated: boolean;
-  registerActivated: boolean;
-
   constructor() { }
 
   ngOnInit(): void {
   }
-  
 
 }
