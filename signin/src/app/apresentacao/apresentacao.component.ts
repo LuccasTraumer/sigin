@@ -32,6 +32,7 @@ export class ApresentacaoComponent implements OnInit {
      document.getElementById('right').style.background = 'linear-gradient(to bottom right, #8f25d6, #620c94)';
    }
    else{
+    document.getElementById('left').style.transition = 'all 2s';
     document.getElementById('left').style.background = 'linear-gradient(to bottom right, #8f25d6, #620c94)';
     document.getElementById('right').style.background = '#fff';  
    }   
