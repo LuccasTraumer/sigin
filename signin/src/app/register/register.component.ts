@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Inject, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'register',
@@ -9,11 +9,11 @@ import { EventEmitter } from 'protractor';
 export class RegisterComponent implements OnInit {
 
   @Output()
-  loginActivated: EventEmitter = new EventEmitter();
+  eventEmiter: EventEmitter<string> = new EventEmitter<string>();
 
   activated(): void {
-    this.loginActivated.emit("false");
     console.log('Desativado');
+    this.eventEmiter.emit('false');
   }
   constructor() { }
 
