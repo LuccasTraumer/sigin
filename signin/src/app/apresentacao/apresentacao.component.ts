@@ -1,4 +1,5 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'apresentacao',
@@ -13,6 +14,7 @@ export class ApresentacaoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.changeBC();
   }
 
   receiveMessage($event) {
@@ -22,6 +24,17 @@ export class ApresentacaoComponent implements OnInit {
     if ($event === 'false'){
       this.loginWithFocus = false;
     }
+    this.changeBC();
+  }
+  changeBC(){
+   if(this.loginWithFocus) {
+     document.getElementById('left').style.background = '#fff';
+     document.getElementById('right').style.background = 'linear-gradient(to bottom right, #8f25d6, #620c94)';
+   }
+   else{
+    document.getElementById('left').style.background = 'linear-gradient(to bottom right, #8f25d6, #620c94)';
+    document.getElementById('right').style.background = '#fff';  
+   }   
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { $ } from 'protractor';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class SigninComponent implements OnInit {
     this.changeValue.emit('true');
   }
 
-  constructor() { }
+
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
   }
