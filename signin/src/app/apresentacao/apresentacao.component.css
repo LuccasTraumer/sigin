@@ -9,6 +9,7 @@
                 0 10px 10px rgba(0, 0, 0, .2);
     margin: 200px 150px 250px 500px;
     font-size: 150%;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 html, body {
     background-color: linear-gradient(to bottom, #efefef, #ccc);
@@ -16,10 +17,12 @@ html, body {
 .left{
     width: 50%;
     align-self: left;
+    align-items: center;
 }
 .right {
     width: 50%;
     align-self: right;
+    align-items: center;
     background: linear-gradient(to bottom right, #8f25d6, #620c94);
 }
 
@@ -34,16 +37,47 @@ html, body {
 }
 #title {
     font-weight: bold;
+    font-size: 50px;
 }
 input {
-    margin-top: 10px;
-    border-radius: 10px;
-    height: 50%;
-    width: 50%;
+    margin-top: 30px;
+    border-radius: 18px;
+    height: 60%;
+    width: 70%;
+    margin-right: 20%;
+    border: aliceblue;
 }
 button {
-    border-radius: 5px;
+    border-radius: 35px;
     height: 50%;
-    width: 50%;
-    margin: 10px 50px 40px 10px;
+    width: 30%;
+    margin: 30px 10px 20px 70px;
+    background-color: #620c94;
+    border: none;
+}
+.subtitle {
+    font-size: 20px;
+}
+button:active {
+    background-color: #fff;
+}
+
+.mt-30 {
+    margin-top: 50px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.ml-70 {
+    margin-left: 70px;
 }

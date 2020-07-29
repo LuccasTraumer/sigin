@@ -1,10 +1,16 @@
 <div class="content">
-    <label id="title"> Criar Login</label>
-    <label > Use seu Email para Registro</label>
+    <ng-container *ngIf="loginWithFocus; else elseTemplate">
+        <label class="title mt-40">Olá amigo!</label>
 
-    <input type="text" name="inpNome" id="" placeholder="Nome">
-    <input type="email" name="inpEmail" id="" placeholder="Email">
-    <input type="password" name="inpPass" id="" placeholder="Senha">
+        <label class="subtitle mt-10">Por favor, insira seu dados pessoais</label>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <label id="title"> Criar Login</label>
+        <label class="subtitle mt-10"> Use seu Email para Registro</label>
 
-    <button type="submit">Registrar</button>
+        <input type="text" name="inpNome" id="" placeholder="Nome">
+        <input type="email" name="inpEmail" id="" placeholder="Email">
+        <input type="password" name="inpPass" id="" placeholder="Senha">
+    </ng-template>
+    <button type="submit" (click)="activated()">Registrar</button>
 </div>

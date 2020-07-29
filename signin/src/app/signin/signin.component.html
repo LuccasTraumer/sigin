@@ -1,9 +1,14 @@
 <div class="content">
-    <label id="title"> Acessar </label>
-    <label> Use sua Conta</label>
-    <input type="email" name="inpEmail" id="" placeholder="Email">
-    <input type="password" name="inpPass" id="" placeholder="Senha">
-
-    <label>Esqueceu sua senha ?</label>
-<button type="button" >Entrar</button>
+        <ng-container *ngIf="loginWithFocus; else elseTemplate">
+            <label id="title" class="ml-40"> Acessar </label>
+            <label class="mt-10 subtitle ml-70"> Use sua Conta</label>
+            <input type="email" name="inpEmail" id="" placeholder="Email">
+            <input type="password" name="inpPass" id="" placeholder="Senha">
+            <label class="mt-30 ml-20">Esqueceu sua senha ?</label>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <label class="title mt-30 ml-40">Bem vindo de volta</label>
+            <label class="subtitle mt-30">Faça o login com suas informações pessoais</label>
+        </ng-template>
+<button type="button" (click)="activate()">Entrar</button>
 </div>

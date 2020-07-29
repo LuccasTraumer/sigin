@@ -1,16 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { $ } from 'protractor';
+
 
 @Component({
   selector: 'signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['../apresentacao/apresentacao.component.css']
+  styleUrls: ['../apresentacao/apresentacao.component.css','./signin.component.css']
 })
 export class SigninComponent implements OnInit {
 
   @Input()
-  btnClick: boolean;
+  loginWithFocus:boolean;
 
-  constructor() { }
+  @Output() 
+  changeValue = new EventEmitter<string>();
+
+  activate():void {
+    console.log('Ativado');
+    console.log(this.loginWithFocus);
+    this.changeValue.emit('true');
+  }
+
+
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
   }
